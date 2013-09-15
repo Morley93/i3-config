@@ -1,0 +1,58 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+net_avg_samples 3
+
+# Update interval in seconds
+update_interval 2
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 1
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+
+[
+	{ "name" : "RAM", "icon" : "$HOME/.i3/xbmicons/mem.xbm", "full_text" : "${mem} [ ${memperc}% ] " , "color" :
+		${if_match ${memperc}>80}"\#ff0000"${else}"\#DEA3E5"${endif} },
+	{ "name" : "root", "icon" : "$HOME/.i3/xbmicons/hdd.xbm", "full_text" : "${fs_used /} [ ${fs_used_perc /}% ] " , "color" :
+		${if_match ${fs_used_perc /}>90}"\#ff0000"${else}"\#DEA3E5"${endif} },
+	{ "name" : "cputemp", "icon" : "$HOME/.i3/xbmicons/temp.xbm", "full_text" : "${acpitemp}°C ", "color" :
+		${if_match ${acpitemp}>55}"\#ff0000"${else}"\#DEA3E5"${endif} },
+	{ "name" : "uptime", "icon" : "$HOME/.i3/xbmicons/clock.xbm", "full_text" : "${uptime_short} " , "color" : "\#DEA3E5" },
+	{ "name" : "WiFi", "icon" : "$HOME/.i3/xbmicons/net-wifi5.xbm", "full_text" : "${wireless_essid wlp1s0} [ ${addr wlp1s0} ] " , "color" : "\#DEA3E5" },
+	{ "name" : "download", "icon" : "$HOME/.i3/xbmicons/down.xbm", "full_text" : "${downspeed wlp1s0}/s " , "color" : "\#DEA3E5" },
+	{ "name" : "upload", "icon" : "$HOME/.i3/xbmicons/up.xbm", "full_text" : "${upspeed wlp1s0}/s " , "color" : "\#DEA3E5" },
+	{ "name" : "volume", "icon" : ${if_mixer_mute}"$HOME/.i3/xbmicons/vol-mute.xbm"${else}"$HOME/.i3/xbmicons/vol.xbm"${endif}, "full_text" : "${exec amixer get Master -M | grep -oP '\d*%'} " , "color" :
+		${if_mixer_mute}"\#ff0000"${else}"\#DEA3E5"${endif} },
+	{ "name" : "battery", "icon" : "$HOME/.i3/xbmicons/power-bat.xbm", "full_text" : "${battery_percent BAT1}% "  , "color" :
+		${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#DEA3E5"${endif} },
+	{ "full_text" : " ${time %A %d %b} ${utime %R} " , "color" : "\#DEA3E5" },
+	{ "full_text" : "" }
+],
+
