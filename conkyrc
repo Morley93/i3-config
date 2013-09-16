@@ -52,7 +52,7 @@ TEXT
 		${if_mixer_mute}"\#ff0000"${else}"\#DEA3E5"${endif} },
 	{ "name" : "battery", "icon" : "$HOME/.i3/xbmicons/power-bat.xbm", "full_text" : "${battery_percent BAT1}% "  , "color" :
 		${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#DEA3E5"${endif} },
-	{ "full_text" : " ${time %A %d %b} ${utime %R} " , "color" : "\#DEA3E5" },
+	{ "full_text" : " ${time %A %d %b} ${time %R} " , "color" : "\#DEA3E5" },
 	{ "full_text" : "" }
 ],
 
