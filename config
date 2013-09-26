@@ -27,7 +27,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 # Launchers
-bindsym $mod+c exec chromium
+bindsym $mod+b exec firefox
 bindsym $mod+t exec thunar
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
