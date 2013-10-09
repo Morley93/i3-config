@@ -8,7 +8,8 @@ urxvt*.background: #1C1C1C
 urxvt*.foreground: #DCDCCC
 !Ereubs colour scheme
 !black / dark gray
-*color0: #757575
+!*color0: #757575
+*color0: #333333
 *color8: #B8B8B8
 !red
 *color1: #FF5F5F
