@@ -15,7 +15,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id sleep 10 && dropboxd
-exec --no-startup-id feh --bg-scale ~/Dropbox/Photos/Wallpapers/current.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 
 # My binds
