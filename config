@@ -32,6 +32,8 @@ bindsym $mod+t exec thunar
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+# Border toggle
+ bindsym $mod+x border toggle
 
 # My rules
 for_window [class="Steam"] floating enable
