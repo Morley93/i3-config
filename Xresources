@@ -6,6 +6,7 @@ urxvt*.font: xft:inconsolata:size=13
 
 urxvt*.background: #1C1C1C
 urxvt*.foreground: #DCDCCC
+
 !Ereubs colour scheme
 !black / dark gray
 !*color0: #757575
@@ -34,7 +35,7 @@ urxvt*.foreground: #DCDCCC
 *color15: #757575
 
 ! Enabling Perl extensions.
-urxvt.perl-ext-common: default,clipboard,matcher
+urxvt.perl-ext-common: default,clipboard,matcher,font-size
 
 ! Copy/paste support.
 urxvt.iso14755: false
@@ -48,3 +49,9 @@ urxvt*.matcher.button: 1
 ! Home/End key fix.
 urxvt*keysym.Home: \033[1~
 urxvt*keysym.End: \033[4~
+
+! On-the-fly font resize.
+urxvt*.keysym.C-Up:     perl:font-size:increase
+urxvt*.keysym.C-Down:   perl:font-size:decrease
+urxvt*.keysym.C-S-Up:   perl:font-size:incglobal
+urxvt*.keysym.C-S-Down: perl:font-size:decglobal
