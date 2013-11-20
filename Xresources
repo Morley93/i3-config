@@ -2,7 +2,7 @@
 
 urxvt*.transparent: false
 urxvt*.scrollBar: false
-urxvt*.font: xft:inconsolata:size=13
+urxvt*.font: xft:inconsolata for Powerline:size=13
 
 urxvt*.background: #1C1C1C
 urxvt*.foreground: #DCDCCC
