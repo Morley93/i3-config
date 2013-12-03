@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Colours and prompt
 autoload -U colors && colors
+export LS_COLORS="di=31:ex=35:ln=36"
 PS1='[%{$fg[red]%}%n%{$reset_color%}][%{$fg[magenta]%}%m%{$reset_color%}][%{$fg[blue]%}%~%{$reset_color%}]
 %{$fg[red]%}>%{$reset_color%}%{$fg[magenta]%}>%{$reset_color%}%{$fg[blue]%}>%{$reset_color%} '
 
