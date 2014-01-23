@@ -19,7 +19,7 @@ short_units yes
 # The value is one of up, link or address, to check for the interface
 # being solely up, being up and having link or being up, having link
 # and an assigned IP address.
-if_up_strictness address
+if_up_strictness link
 
 # Add spaces to keep things from moving about?  This only affects certain objects.
 # use_spacer should have an argument of left, right, or none
@@ -60,17 +60,17 @@ TEXT
     },
     {
         "icon"      : "$HOME/.i3/xbmicons/net-wifi5.xbm",
-        "full_text" : "${wireless_essid wlp1s0} [ ${addr wlp1s0} ] ",
+        "full_text" : ${if_up wlp1s0}"${wireless_essid wlp1s0} [ ${addr wlp1s0} ] "${else}"${wireless_essid wlp0s29u1u2} [ ${addr wlp0s29u1u2} ] (USB) "${endif},
         "color"     : "\#88ABC4"
     },
     {
         "icon"      : "$HOME/.i3/xbmicons/down.xbm",
-        "full_text" : "${downspeed wlp1s0}/s ",
+        "full_text" : ${if_up wlp1s0}"${downspeed wlp1s0}/s "${else}"${downspeed wlp0s29u1u2}/s "${endif},
         "color"     : "\#88ABC4"
     },
     {
         "icon"      : "$HOME/.i3/xbmicons/up.xbm",
-        "full_text" : "${upspeed wlp1s0}/s ",
+        "full_text" : ${if_up wlp1s0}"${upspeed wlp1s0}/s "${else}"${upspeed wlp0s29u1u2}/s "${endif},
         "color"     : "\#88ABC4"
     },
     {
