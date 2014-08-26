@@ -11,12 +11,10 @@
 
 # Startup
 exec --no-startup-id setxkbmap gb
-exec --no-startup-id nm-applet
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id sleep 10 && dropboxd
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
-
+exec --no-startup-id dex -ae i3
 
 # My binds
 # Volume
@@ -197,7 +195,7 @@ client.focused #1f1f1f #004577  #88ABC4
 # finds out, if available)
 bar {
 
-        i3bar_command i3bar-icons
+        i3bar_command i3bar
         status_command $HOME/.i3/conky-i3bar
         position top
 

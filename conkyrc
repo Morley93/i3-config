@@ -60,7 +60,8 @@ TEXT
     },
     {
         "icon"      : "$HOME/.i3/xbmicons/net-wifi5.xbm",
-        "full_text" : ${if_up wlp1s0}"${wireless_essid wlp1s0} [ ${addr wlp1s0} ] "${else}"${wireless_essid wlp0s29u1u2} [ ${addr wlp0s29u1u2} ] (USB) "${endif},
+        "full_text" : "${wireless_essid wlp1s0} [ ${addr wlp1s0} ] ",
+        # "full_text" : ${if_up wlp1s0}"${wireless_essid wlp1s0} [ ${addr wlp1s0} ] "${else}"${wireless_essid wlp0s29u1u2} [ ${addr wlp0s29u1u2} ] (USB) "${endif},
         "color"     : "\#88ABC4"
     },
     {
