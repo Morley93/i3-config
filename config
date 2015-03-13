@@ -11,6 +11,7 @@
 
 # Startup
 exec --no-startup-id setxkbmap gb
+exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
