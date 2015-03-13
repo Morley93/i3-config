@@ -19,8 +19,8 @@ exec --no-startup-id dex -ae i3
 
 # My binds
 # Volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -M 5-%
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -M 5+%
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -M 5%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -M 5%+
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # Brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
