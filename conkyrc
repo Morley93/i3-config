@@ -54,37 +54,31 @@ TEXT
         "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/clock.xbm",
-        "full_text" : "${uptime_short} ",
+        "full_text" : " ${uptime_short} ",
         "color"     : "\#88ABC4"
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/net-wifi5.xbm",
-        "full_text" : "${wireless_essid wlp1s0} [ ${addr wlp1s0} ] ",
+        "full_text" : " ${wireless_essid wlp1s0} [ ${addr wlp1s0} ] ",
         "color"     : "\#88ABC4"
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/down.xbm",
-        "full_text" : ${if_up wlp1s0}"${downspeed wlp1s0}/s "${else}"${downspeed wlp0s29u1u2}/s "${endif},
+        "full_text" : " ${downspeed wlp1s0}/s ",
         "color"     : "\#88ABC4"
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/up.xbm",
-        "full_text" : ${if_up wlp1s0}"${upspeed wlp1s0}/s "${else}"${upspeed wlp0s29u1u2}/s "${endif},
+        "full_text" : " ${upspeed wlp1s0}/s ",
         "color"     : "\#88ABC4"
     },
     {
-        "icon"      : ${if_mixer_mute}"$HOME/.i3/xbmicons/vol-mute.xbm"${else}"$HOME/.i3/xbmicons/vol.xbm"${endif},
-        "full_text" : "${exec amixer get Master -M | grep -oP '\d*%' | head -n1} ",
+        "full_text" : " ${exec amixer get Master -M | grep -oP '\d*%' | head -n1} ",
         "color"     : ${if_mixer_mute}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/power-bat.xbm",
-        "full_text" : "${battery_percent BAT1}% "  ,
+        "full_text" : " ${battery_percent BAT1}% "  ,
         "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : " ${time %A %d %b} ${time %R} ",
+        "full_text" : " ${time %A %d %b} ${time %R} ",
         "color"     : "\#88ABC4"
     },
     {

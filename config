@@ -203,7 +203,7 @@ bar {
         colors {
 
             background #212121
-            statusline #646663
+            statusline #88ABC4
 
             focused_workspace #005795 #004577 #88ABC4
             urgent_workspace  #052225 #88ABC4 #052225
