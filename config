@@ -196,7 +196,7 @@ client.focused #1f1f1f #004577  #88ABC4
 # finds out, if available)
 bar {
 
-        i3bar_command i3bar
+        i3bar_command i3bar-icons
         status_command $HOME/.i3/conky-i3bar
         position top
 
