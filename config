@@ -10,12 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Startup
-exec --no-startup-id setxkbmap gb
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id urxvtd -q -o -f
-exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
-exec --no-startup-id dex -a -e i3 -s ~/.config/autostart
+exec --no-startup-id dex -a -e i3
 
 # My binds
 # Volume
@@ -28,6 +24,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 # Launchers
 bindsym $mod+b exec firefox
 bindsym $mod+t exec thunar
+bindsym $mod+m exec thunderbird
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -149,10 +146,10 @@ bindsym $mod+Shift+r restart
 # Exit menu.
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym l exec --no-startup-id $HOME/.i3/i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/.i3/i3exit logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/.i3/i3exit suspend, mode "default"
+    bindsym r exec --no-startup-id $HOME/.i3/i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
