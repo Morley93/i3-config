@@ -22,7 +22,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 # Launchers
-bindsym $mod+b exec firefox
+bindsym $mod+b exec chromium
 bindsym $mod+t exec thunar
 bindsym $mod+m exec thunderbird
 # Scratchpad
@@ -33,6 +33,7 @@ bindsym $mod+minus scratchpad show
 
 # My rules
 for_window [class="Steam"] floating enable
+for_window [class="chromium"] border none
 
 set $mod Mod4
 
